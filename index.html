@@ -15,15 +15,17 @@
 
         <style>
             :root {
-                --bg-gradient-start: #ffecd2;
-                --bg-gradient-end: #fcb69f;
-                --container-bg: rgba(255, 255, 255, 0.85);
-                --text-color: #2d3748;
-                --border-color: rgba(255, 255, 255, 0.3);
-                --icon-bg: rgba(255, 255, 255, 0.4);
-                --icon-bg-hover: rgba(255, 255, 255, 0.6);
-                --toggle-bg: rgba(255, 255, 255, 0.3);
-                --toggle-icon: #ed8936;
+                --bg-gradient-start: #f0f4ff;
+                --bg-gradient-end: #e6e9ff;
+                --container-bg: rgba(255, 255, 255, 0.7);
+                --text-color: #4a5568;
+                --heading-color: #2d3748;
+                --border-color: rgba(255, 255, 255, 0.5);
+                --icon-bg: rgba(255, 255, 255, 0.6);
+                --icon-bg-hover: rgba(255, 255, 255, 0.8);
+                --toggle-bg: rgba(255, 255, 255, 0.5);
+                --toggle-icon: #7c3aed;
+                --transition-speed: 0.3s;
             }
 
             [data-theme="dark"] {
@@ -31,6 +33,7 @@
                 --bg-gradient-end: #2d3748;
                 --container-bg: rgba(0, 0, 0, 0.4);
                 --text-color: #f7fafc;
+                --heading-color: #f8fafc;
                 --border-color: rgba(255, 255, 255, 0.1);
                 --icon-bg: rgba(0, 0, 0, 0.3);
                 --icon-bg-hover: rgba(0, 0, 0, 0.5);
@@ -48,7 +51,7 @@
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                transition: all 0.3s ease;
+                transition: all var(--transition-speed) ease;
             }
 
             .container {
@@ -62,7 +65,7 @@
                 padding: 40px;
                 box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
                 border: 1px solid var(--border-color);
-                transition: all 0.3s ease;
+                transition: all var(--transition-speed) ease;
             }
 
             h3 {
@@ -70,10 +73,7 @@
                 margin: 0 0 20px 0;
                 font-weight: 300;
                 letter-spacing: 2px;
-                background: linear-gradient(135deg, #ed8936 0%, #f093fb 50%, #f5576c 100%);
-                -webkit-background-clip: text;
-                -webkit-text-fill-color: transparent;
-                background-clip: text;
+                color: var(--heading-color);
                 display: flex;
                 align-items: center;
                 justify-content: center;
@@ -130,7 +130,7 @@
                 height: 2px;
                 bottom: -2px;
                 left: 50%;
-                background: linear-gradient(135deg, #ed8936 0%, #f093fb 50%, #f5576c 100%);
+                background: #a855f7;
                 transition: all 0.3s ease;
                 transform: translateX(-50%);
             }
@@ -159,7 +159,7 @@
                 padding: 8px 16px;
                 border-radius: 12px;
                 background: var(--icon-bg);
-                transition: all 0.3s ease;
+                transition: all var(--transition-speed) ease;
                 text-decoration: none !important;
             }
 
@@ -190,13 +190,13 @@
 
             .github-link span {
                 font-weight: 500;
-                color: var(--text-color);
-                transition: all 0.3s ease;
+                color: var(--heading-color);
+                transition: all var(--transition-speed) ease;
                 font-size: 1.4em;
             }
 
             .github-link:hover span {
-                color: #ed8936;
+                color: var(--heading-color);
             }
 
             .theme-toggle {
@@ -213,7 +213,7 @@
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                transition: all 0.3s ease;
+                transition: all var(--transition-speed) ease;
                 box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
             }
 
@@ -226,7 +226,7 @@
                 width: 24px;
                 height: 24px;
                 fill: var(--toggle-icon);
-                transition: all 0.3s ease;
+                transition: all var(--transition-speed) ease;
             }
 
             .theme-toggle .sun-icon {
