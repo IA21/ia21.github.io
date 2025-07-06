@@ -74,6 +74,45 @@
                 -webkit-background-clip: text;
                 -webkit-text-fill-color: transparent;
                 background-clip: text;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 12px;
+            }
+
+            .wave-hand {
+                display: inline-block;
+                animation: wave 2s infinite;
+                transform-origin: 70% 70%;
+                font-size: 0.9em;
+                -webkit-text-fill-color: initial;
+                background: none;
+                color: initial;
+            }
+
+            @keyframes wave {
+                0%,
+                100% {
+                    transform: rotate(0deg);
+                }
+                10%,
+                30% {
+                    transform: rotate(-10deg);
+                }
+                20% {
+                    transform: rotate(12deg);
+                }
+                40%,
+                60% {
+                    transform: rotate(9deg);
+                }
+                50% {
+                    transform: rotate(-9deg);
+                }
+                70%,
+                90% {
+                    transform: rotate(0deg);
+                }
             }
 
             a {
@@ -113,19 +152,51 @@
                 margin-top: 8px;
             }
 
-            .social img {
+            .github-link {
+                display: flex;
+                align-items: center;
+                gap: 8px;
+                padding: 8px 16px;
+                border-radius: 12px;
+                background: var(--icon-bg);
+                transition: all 0.3s ease;
+                text-decoration: none !important;
+            }
+
+            .github-link:hover {
+                background: var(--icon-bg-hover);
+                transform: translateY(-2px);
+                box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+            }
+
+            .github-link::after {
+                display: none;
+            }
+
+            .github-link img {
                 width: 30px;
                 height: 30px;
                 transition: all 0.3s ease;
                 border-radius: 6px;
-                padding: 6px;
-                background: var(--icon-bg);
+                padding: 0;
+                background: none;
             }
 
-            .social img:hover {
-                transform: translateY(-2px) scale(1.1);
-                background: var(--icon-bg-hover);
-                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            .github-link:hover img {
+                transform: none;
+                background: none;
+                box-shadow: none;
+            }
+
+            .github-link span {
+                font-weight: 500;
+                color: var(--text-color);
+                transition: all 0.3s ease;
+                font-size: 1.4em;
+            }
+
+            .github-link:hover span {
+                color: #667eea;
             }
 
             .theme-toggle {
@@ -170,6 +241,11 @@
                 display: block;
             }
 
+            [data-theme="dark"] .theme-toggle .sun-icon * {
+                fill: #ffa500;
+                stroke: #ffa500;
+            }
+
             [data-theme="dark"] .theme-toggle .moon-icon {
                 display: none;
             }
@@ -177,19 +253,22 @@
     </head>
     <body>
         <div class="container">
-            <h3>hello.</h3>
+            <h3>
+                Hi
+                <span class="wave-hand">👋</span>
+            </h3>
             <div class="social">
-                <a href="https://github.com/IA21" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile">
+                <a href="https://github.com/IA21" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile" class="github-link">
                     <img id="github-icon" src="github-mark.svg" alt="GitHub" width="30" height="30" />
+                    <span>IA21</span>
                 </a>
-                <a href="https://github.com/IA21" target="_blank" rel="noopener noreferrer">IA21</a>
             </div>
         </div>
 
         <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
             <svg class="sun-icon" viewBox="0 0 24 24">
-                <circle cx="12" cy="12" r="5" />
-                <path d="M12 1v2M12 21v2M4.2 4.2l1.4 1.4M18.4 18.4l1.4 1.4M1 12h2M21 12h2M4.2 19.8l1.4-1.4M18.4 5.6l1.4-1.4" />
+                <circle cx="12" cy="12" r="4" />
+                <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M19.07 4.93l-1.41 1.41" />
             </svg>
             <svg class="moon-icon" viewBox="0 0 24 24">
                 <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z" />
