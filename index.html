@@ -15,27 +15,27 @@
 
         <style>
             :root {
-                --bg-gradient-start: #f5f7fa;
-                --bg-gradient-end: #c3cfe2;
-                --container-bg: rgba(255, 255, 255, 0.9);
-                --text-color: #2c3e50;
-                --border-color: rgba(255, 255, 255, 0.2);
-                --icon-bg: rgba(255, 255, 255, 0.3);
-                --icon-bg-hover: rgba(255, 255, 255, 0.5);
-                --toggle-bg: rgba(255, 255, 255, 0.2);
-                --toggle-icon: #667eea;
+                --bg-gradient-start: #ffecd2;
+                --bg-gradient-end: #fcb69f;
+                --container-bg: rgba(255, 255, 255, 0.85);
+                --text-color: #2d3748;
+                --border-color: rgba(255, 255, 255, 0.3);
+                --icon-bg: rgba(255, 255, 255, 0.4);
+                --icon-bg-hover: rgba(255, 255, 255, 0.6);
+                --toggle-bg: rgba(255, 255, 255, 0.3);
+                --toggle-icon: #ed8936;
             }
 
             [data-theme="dark"] {
-                --bg-gradient-start: #2c3e50;
-                --bg-gradient-end: #34495e;
-                --container-bg: rgba(0, 0, 0, 0.3);
-                --text-color: #ecf0f1;
+                --bg-gradient-start: #1a202c;
+                --bg-gradient-end: #2d3748;
+                --container-bg: rgba(0, 0, 0, 0.4);
+                --text-color: #f7fafc;
                 --border-color: rgba(255, 255, 255, 0.1);
-                --icon-bg: rgba(0, 0, 0, 0.2);
-                --icon-bg-hover: rgba(0, 0, 0, 0.4);
-                --toggle-bg: rgba(0, 0, 0, 0.2);
-                --toggle-icon: #f1c40f;
+                --icon-bg: rgba(0, 0, 0, 0.3);
+                --icon-bg-hover: rgba(0, 0, 0, 0.5);
+                --toggle-bg: rgba(0, 0, 0, 0.3);
+                --toggle-icon: #fbb6ce;
             }
 
             body {
@@ -70,7 +70,7 @@
                 margin: 0 0 20px 0;
                 font-weight: 300;
                 letter-spacing: 2px;
-                background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+                background: linear-gradient(135deg, #ed8936 0%, #f093fb 50%, #f5576c 100%);
                 -webkit-background-clip: text;
                 -webkit-text-fill-color: transparent;
                 background-clip: text;
@@ -130,7 +130,7 @@
                 height: 2px;
                 bottom: -2px;
                 left: 50%;
-                background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+                background: linear-gradient(135deg, #ed8936 0%, #f093fb 50%, #f5576c 100%);
                 transition: all 0.3s ease;
                 transform: translateX(-50%);
             }
@@ -140,7 +140,7 @@
             }
 
             a:hover {
-                color: #667eea;
+                color: #ed8936;
                 transform: translateY(-2px);
             }
 
@@ -196,7 +196,7 @@
             }
 
             .github-link:hover span {
-                color: #667eea;
+                color: #ed8936;
             }
 
             .theme-toggle {
